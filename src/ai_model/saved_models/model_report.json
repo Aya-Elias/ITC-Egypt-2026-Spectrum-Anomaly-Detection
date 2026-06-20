@@ -1,0 +1,40 @@
+{
+  "model": "EfficientNet-B0",
+  "accuracy": 0.9347,
+  "test_samples": 1179,
+  "classification_report": {
+    "Drone": {
+      "precision": 1.0,
+      "recall": 0.8,
+      "f1": 0.89
+    },
+    "Normal": {
+      "precision": 0.97,
+      "recall": 1.0,
+      "f1": 0.98
+    },
+    "Jamming": {
+      "precision": 0.86,
+      "recall": 1.0,
+      "f1": 0.92
+    }
+  },
+  "confusion_matrix": [
+    [
+      316,
+      13,
+      64
+    ],
+    [
+      0,
+      393,
+      0
+    ],
+    [
+      0,
+      0,
+      393
+    ]
+  ],
+  "timestamp": "2026-04-24T17:13:34.269921"
+}
