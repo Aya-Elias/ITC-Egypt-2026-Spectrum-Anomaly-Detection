@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: sadar-config
+data:
+  ALLOWED_ORIGINS: "https://sadar.example.com"
+  MODEL_PATH: "/app/src/ai_model/saved_models/best_model.keras"
+  SADAR_DB_PATH: "/app/data/database/spectrum.db"

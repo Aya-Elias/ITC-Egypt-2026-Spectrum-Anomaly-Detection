@@ -1,0 +1,8 @@
+# Optional SADAR ML dependencies
+-r requirements.txt
+
+# TensorFlow currently supports Python <=3.12 on Windows. Use Python 3.10-3.12.
+tensorflow>=2.16.1,<2.18
+
+# Optional local RAG embeddings. The agent works without this via hashing fallback.
+sentence-transformers>=2.7.0

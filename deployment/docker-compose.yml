@@ -1,0 +1,25 @@
+services:
+  sadar-api:
+    build:
+      context: ..
+      dockerfile: deployment/Dockerfile
+    ports:
+      - "8000:8000"
+    environment:
+      ALLOWED_ORIGINS: ${ALLOWED_ORIGINS:-http://localhost:8501}
+      SADAR_DB_PATH: /app/data/database/spectrum.db
+      OLLAMA_BASE_URL: http://ollama:11434
+    volumes:
+      - ../data/database:/app/data/database
+    depends_on:
+      - ollama
+
+  ollama:
+    image: ollama/ollama:latest
+    ports:
+      - "11434:11434"
+    volumes:
+      - ollama:/root/.ollama
+
+volumes:
+  ollama:

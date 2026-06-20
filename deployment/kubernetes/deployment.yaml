@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: sadar-api
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: sadar-api
+  template:
+    metadata:
+      labels:
+        app: sadar-api
+    spec:
+      containers:
+        - name: api
+          image: sadar-api:latest
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 8000
+          envFrom:
+            - configMapRef:
+                name: sadar-config
+          readinessProbe:
+            httpGet:
+              path: /api/v1/health
+              port: 8000
+            initialDelaySeconds: 10
+            periodSeconds: 10

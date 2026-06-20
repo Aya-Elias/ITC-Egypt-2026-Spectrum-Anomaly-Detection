@@ -1,0 +1,11 @@
+ollama:
+  base_url: http://localhost:11434
+  model: llama3
+  timeout_seconds: 120
+  fallback_enabled: true
+
+rag:
+  default_top_k: 5
+  chunk_size: 900
+  chunk_overlap: 120
+  max_document_bytes: 2000000

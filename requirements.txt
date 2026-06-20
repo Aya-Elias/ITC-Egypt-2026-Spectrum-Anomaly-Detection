@@ -1,0 +1,25 @@
+# SADAR core runtime dependencies
+fastapi>=0.115.0
+uvicorn[standard]>=0.30.0
+pydantic>=2.7.0
+python-multipart>=0.0.9
+numpy>=1.26.0
+scipy>=1.11.0
+opencv-python>=4.9.0
+pillow>=10.0.0
+pandas>=2.1.0
+scikit-learn>=1.4.0
+matplotlib>=3.8.0
+seaborn>=0.13.0
+streamlit>=1.35.0
+requests>=2.31.0
+pypdf>=4.2.0
+cryptography>=42.0.0
+PyYAML>=6.0.1
+
+# Dashboard additional dependencies
+plotly>=5.24.0
+psutil>=5.9.0
+
+# TensorFlow and embedding models are optional; install requirements-ml.txt
+# on Python 3.10-3.12 when running classifier/model-heavy tests.

@@ -1,0 +1,12 @@
+{
+  "name": "sadar",
+  "version": "0.1.0",
+  "private": true,
+  "description": "AI-powered RF spectrum anomaly detection system",
+  "scripts": {
+    "api": "python -m uvicorn src.api.main:app --reload",
+    "dashboard": "streamlit run src/dashboard/app.py",
+    "site": "python -m http.server 8080 -d website",
+    "test": "python -m pytest -q"
+  }
+}

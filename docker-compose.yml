@@ -1,0 +1,27 @@
+services:
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000"
+    environment:
+      MODEL_PATH: /app/src/ai_model/saved_models/best_model.keras
+      SADAR_DB_PATH: /app/data/database/spectrum.db
+      ALLOWED_ORIGINS: http://localhost:8501,http://127.0.0.1:8501
+      OLLAMA_BASE_URL: http://ollama:11434
+    volumes:
+      - ./data/database:/app/data/database
+      - ./src/ai_agent/cache:/app/src/ai_agent/cache
+    depends_on:
+      - ollama
+
+  ollama:
+    image: ollama/ollama:latest
+    ports:
+      - "11434:11434"
+    volumes:
+      - ollama:/root/.ollama
+
+volumes:
+  ollama:

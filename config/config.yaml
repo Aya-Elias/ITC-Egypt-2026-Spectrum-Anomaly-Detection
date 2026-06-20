@@ -1,0 +1,27 @@
+app:
+  name: SADAR
+  environment: development
+  api_prefix: /api/v1
+
+server:
+  host: 0.0.0.0
+  port: 8000
+  allowed_origins:
+    - http://localhost:8501
+    - http://127.0.0.1:8501
+
+model:
+  path: src/ai_model/saved_models/best_model.keras
+  version: v1.0
+  required: false
+
+agent:
+  ollama_base_url: http://localhost:11434
+  ollama_model: llama3
+  default_top_k: 5
+
+database:
+  path: data/database/spectrum.db
+
+alerts:
+  threshold: 0.75

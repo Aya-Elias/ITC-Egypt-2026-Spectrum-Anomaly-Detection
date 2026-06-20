@@ -1,0 +1,5 @@
+FROM ollama/ollama:latest
+
+# Optional custom image for preloading SADAR's preferred model.
+# Run `ollama pull llama3` at deployment time or bake it in a private image.
+EXPOSE 11434

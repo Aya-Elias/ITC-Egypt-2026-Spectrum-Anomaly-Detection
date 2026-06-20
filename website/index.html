@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="SADAR is a professional AI-powered RF spectrum anomaly detection platform for drone and jamming awareness." />
+    <meta name="theme-color" content="#07111f" />
+    <title>SADAR — Professional RF Spectrum Intelligence</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/styles.css" />
+  </head>
+  <body>
+    <div class="page-bg" aria-hidden="true"><span></span><span></span><span></span></div>
+
+    <header class="site-header" id="top">
+      <nav class="container nav" aria-label="Primary navigation">
+        <a class="brand" href="#top">
+          <span class="brand-mark"><i></i></span>
+          <span><strong>SADAR</strong><small>RF Spectrum Intelligence</small></span>
+        </a>
+        <button class="nav-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false"><span></span><span></span><span></span></button>
+        <div class="nav-links">
+          <a href="#platform">Platform</a>
+          <a href="#results">Results</a>
+          <a href="#workflow">Workflow</a>
+          <a href="#agent">AI Agent</a>
+          <a href="#engineering">Engineering</a>
+          <a class="nav-cta" href="https://github.com/GhariebML/SADAR">GitHub</a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero" id="platform">
+        <div class="container hero-grid">
+          <div class="hero-copy reveal">
+            <div class="kicker"><span></span> ITC-EGYPT 2026 · Intelligent Software Systems</div>
+            <h1>Professional RF anomaly detection for mission-aware teams.</h1>
+            <p class="hero-text">
+              SADAR converts radio-frequency activity into reliable intelligence by classifying spectrograms as
+              <strong>Drone</strong>, <strong>Normal</strong>, or <strong>Jamming</strong>, then supporting operators with alerts,
+              analytics, and AI-assisted incident reports.
+            </p>
+            <div class="hero-actions">
+              <a class="btn primary" href="#results">Review Performance</a>
+              <a class="btn secondary" href="#workflow">See Workflow</a>
+            </div>
+            <div class="hero-metrics">
+              <article><strong data-count="93.47">0</strong><span>% accuracy</span></article>
+              <article><strong data-count="1179">0</strong><span>test samples</span></article>
+              <article><strong data-count="25">0</strong><span>tests passing</span></article>
+            </div>
+          </div>
+
+          <aside class="ops-panel reveal" aria-label="Operational dashboard preview">
+            <div class="ops-top"><span class="pulse"></span><strong>Operational View</strong><em>ACTIVE</em></div>
+            <div class="radar-wrap">
+              <div class="radar-screen">
+                <span class="ring r1"></span><span class="ring r2"></span><span class="ring r3"></span>
+                <span class="sweep"></span>
+                <span class="target t1"></span><span class="target t2"></span><span class="target t3"></span>
+              </div>
+              <div class="classification-card">
+                <small>Latest detection</small>
+                <strong>Jamming Signal</strong>
+                <span>Confidence · 92%</span>
+              </div>
+            </div>
+            <div class="ops-stats">
+              <div><small>Band</small><strong>2.45 GHz</strong></div>
+              <div><small>SNR</small><strong>24 dB</strong></div>
+              <div><small>Action</small><strong>Escalate</strong></div>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <section class="section intro-strip">
+        <div class="container strip-grid">
+          <p class="reveal">Built as an end-to-end system, not just a notebook: model artifacts, API routes, RAG agent, tests, Docker assets, CI workflows, and a publishable website.</p>
+          <div class="strip-tags reveal"><span>FastAPI</span><span>EfficientNet-B0</span><span>Streamlit</span><span>Ollama RAG</span><span>SQLite</span></div>
+        </div>
+      </section>
+
+      <section class="section" id="results">
+        <div class="container section-head reveal">
+          <span class="label">Measured Results</span>
+          <h2>Clear performance, clear limitations.</h2>
+          <p>SADAR achieved strong performance on a balanced unseen test set while making the drone/jamming separation challenge explicit.</p>
+        </div>
+        <div class="container results-grid">
+          <article class="score-card reveal main-score"><span>Final Accuracy</span><strong>93.47%</strong><p>1,102 correct predictions from 1,179 unseen samples.</p></article>
+          <article class="score-card reveal"><span>Drone F1</span><strong>0.89</strong><p>Primary improvement target: 80% recall.</p></article>
+          <article class="score-card reveal"><span>Normal F1</span><strong>0.98</strong><p>Perfect recall in the final test split.</p></article>
+          <article class="score-card reveal"><span>Jamming F1</span><strong>0.92</strong><p>Perfect recall with strong anomaly detection.</p></article>
+        </div>
+        <div class="container matrix-card reveal">
+          <div><h3>Confusion Matrix</h3><p>Drone-like activity can resemble jamming in some spectrograms. The next model iteration should focus on collecting harder drone/jamming examples.</p></div>
+          <div class="matrix">
+            <span></span><b>Drone</b><b>Normal</b><b>Jamming</b>
+            <b>Drone</b><strong>316</strong><span>13</span><i>64</i>
+            <b>Normal</b><span>0</span><strong>393</strong><span>0</span>
+            <b>Jamming</b><span>0</span><span>0</span><strong>393</strong>
+          </div>
+        </div>
+      </section>
+
+      <section class="section workflow-section" id="workflow">
+        <div class="container section-head centered reveal">
+          <span class="label">Detection Workflow</span>
+          <h2>From RF signal to operator decision.</h2>
+        </div>
+        <div class="container workflow">
+          <article class="workflow-step reveal"><span>01</span><h3>Capture</h3><p>RTL-SDR-ready I/Q sample acquisition.</p></article>
+          <article class="workflow-step reveal"><span>02</span><h3>Transform</h3><p>STFT conversion into 224×224 RGB spectrograms.</p></article>
+          <article class="workflow-step reveal"><span>03</span><h3>Classify</h3><p>EfficientNet-B0 predicts Drone, Normal, or Jamming.</p></article>
+          <article class="workflow-step reveal"><span>04</span><h3>Respond</h3><p>FastAPI records events, streams alerts, and supports reports.</p></article>
+        </div>
+      </section>
+
+      <section class="section" id="agent">
+        <div class="container agent-grid">
+          <div class="agent-copy reveal">
+            <span class="label">AI Analyst Layer</span>
+            <h2>Explain detections and generate structured reports.</h2>
+            <p>The SADAR AI agent uses retrieval, threat scoring, and fallback-safe language generation to help operators understand what happened and what to do next.</p>
+            <ul class="check-list"><li>Threat assessment endpoint</li><li>Incident report generator</li><li>Knowledge-base rebuild flow</li><li>Works even when the classifier is unavailable</li></ul>
+          </div>
+          <div class="terminal reveal">
+            <div class="terminal-bar"><span></span><span></span><span></span><em>agent/report</em></div>
+            <pre><code>Threat Level: CRITICAL
+Signal: Jamming
+Confidence: 0.92
+Frequency: 2450 MHz
+
+Recommended Actions:
+1. Verify affected band
+2. Confirm persistence
+3. Escalate to operations lead
+4. Generate incident report</code></pre>
+          </div>
+        </div>
+      </section>
+
+      <section class="section engineering-section" id="engineering">
+        <div class="container section-head reveal"><span class="label">Engineering Readiness</span><h2>Professional repository foundations.</h2></div>
+        <div class="container engineering-grid">
+          <article class="engineering-card reveal"><h3>CI/CD</h3><p>GitHub Actions for tests, lint, security, deployment smoke checks, and Pages publishing.</p></article>
+          <article class="engineering-card reveal"><h3>Testing</h3><p>API, database, dashboard, encryption, hardware simulation, signal processing, and integration tests.</p></article>
+          <article class="engineering-card reveal"><h3>Deployment</h3><p>Docker, Compose, Kubernetes templates, Nginx config, and Raspberry Pi setup scripts.</p></article>
+          <article class="engineering-card reveal"><h3>Documentation</h3><p>Technical report, API docs, database schema, installation guide, and security notes.</p></article>
+        </div>
+      </section>
+
+      <section class="section cta-section">
+        <div class="container cta-card reveal">
+          <div><span class="label">Get Started</span><h2>Run SADAR locally or review it on GitHub.</h2><p>Preview the website, run tests, or launch the backend from the repository.</p></div>
+          <div class="command-card"><button class="copy-btn" data-copy-target="quickstart" type="button">Copy</button><pre id="quickstart"><code>git clone https://github.com/GhariebML/SADAR.git
+cd SADAR
+python -m pip install -r requirements-dev.txt
+python -m pytest -q
+python -m http.server 8080 -d website</code></pre></div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer"><div class="container footer-grid"><div><strong>SADAR</strong><p>Professional RF spectrum anomaly detection.</p></div><div><a href="https://github.com/GhariebML/SADAR">GitHub</a><a href="../docs/reports/FINAL_REPORT.md">Report</a><a href="#top">Top</a></div></div></footer>
+    <script src="assets/script.js"></script>
+  </body>
+</html>
